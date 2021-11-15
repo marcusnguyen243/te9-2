@@ -42,13 +42,13 @@ const loader = new GLTFLoader().load(
     // Scan loaded model for mesh and apply defined material if mesh is present
     gltf.scene.traverse(function(child) {
       if (child.isMesh) {
-        child.material = newMaterial;
+        //child.material = newMaterial;
       }
     });
     // set position and scale
     mesh = gltf.scene;
     mesh.position.set(0, 0, 1);
-    mesh.scale.set(1, 1, 1);
+    mesh.scale.set(.2, .2, .2);
     // Add model to scene
     scene.add(mesh);
   },
